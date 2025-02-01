@@ -85,8 +85,8 @@ function createTicket(taskcolor,task,id){
 }
 
 //Append a new Task
-modelCont.addEventListener("keydown", function(e){
-    if(e.key==="Shift"){
+modelCont.addEventListener("keypress", function(e){
+    if(e.key==="Enter"){
         let task=textArea.value
         let id=(Math.random()*10000).toFixed(0)
         createTicket(modelPriorityColor,task,id)
