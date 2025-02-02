@@ -1,159 +1,172 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .toolbox-cont{
-    display: flex;
-    height:4rem ;
-    background-color: #4b4b4b;
-    align-items: center;
-    
-   
-   
-  }
-  
-  .toolbox-priority-cont{
-    display: flex;
-    height:2.5rem ;
-    width: 18rem;
-    background-color: #3b3b3b;
-    margin-left: 4rem;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 0.5rem;
-  box-shadow: 0 2px 3px rgba(0,0,0);
-   
-  }
-  
-  .color{
-    height: 1.5rem;
-    width: 3rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 3px rgba(0,0,0);
-  
-  }
-  
-  .light-pink{
-    background-color: lightpink;
-  }
-  
-  
-  .light-green{
-    background-color: lightgreen;
-  }
-  
-  .light-blue{
-    background-color: lightblue;
-  }
-  
-  .black{
-    background-color: black;
-  }
-  
-  /* Action buttons  */
-  
-  
-  .action-btn-cont{
-    display: flex;
-    height:2.5rem ;
-    width: 6rem;
-    background-color:#3b3b3b ;
-    margin-left: 3rem;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 3px rgba(0,0,0);
-  
-  }
-  
-  .action-btn-cont>*{
-    width: 50%;
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-  }
- 
-
-  .model-cont{
-    height: 50vh;
-    width: 45vw;
-    display: flex;
-    position: absolute;
-    top: 30%;
-    left: 27%;
-    display: none;
-  }
-  .text-area{
-    height: 100%;
-    width: 80%;
-    background-color: #dfe4ea;
-    border: none;
-    outline: none;  
-    resize: none;
-    font-size: 2rem;
-
-  }
-
-.priority-color{
-    height: 100%;
-    width: 20%;
-    background-color: #4b4b4b;
-    display: flex;
-
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent box model */
 }
-.priority-btn{
-  height: 2.5rem;
-  width: 6rem;
-  margin: 6px;
+
+/* Toolbox Designs */
+.toolbox-cont {
+  background-color: #4b4b4b;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem; /* Add padding for better spacing */
+  gap: 2rem; /* Ensure even spacing between child elements */
+}
+
+.toolbox-filter-colors {
+  background-color: #3d3d3d;
+  width: 18rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   cursor: pointer;
+  border-radius: 0.5rem; /* Smooth corners */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Add subtle animations */
 }
-.remove{
-  color: red;
+
+.toolbox-filter-colors:hover {
+  background-color: #505050; /* Slightly lighten on hover */
+  transform: scale(1.05); /* Slight zoom effect */
 }
 
+.color-box {
+  height: 1.5rem;
+  width: 3rem;
+  border-radius: 0.25rem; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  transition: transform 0.2s ease; /* Hover animation */
+}
 
+.color-box:hover {
+  transform: scale(1.1); /* Enlarge slightly on hover */
+}
 
-/* ticket-Design */
+.action-btn-cont {
+  background-color: #3d3d3d;
+  height: 3.5rem;
+  width: 8rem;
+  display: flex;
+  border-radius: 0.5rem; /* Rounded corners */
+  overflow: hidden; /* Ensure buttons don't overflow */
+}
 
-.main-cont{
+.action-btn-cont > * {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem; /* Slightly adjust size for better spacing */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add hover transition */
+}
+
+.action-btn-cont > *:hover {
+  background-color: #505050; /* Highlight on hover */
+}
+
+/* Filter colors */
+.lightpink {
+  background-color: lightpink;
+}
+
+.lightblue {
+  background-color: lightblue;
+}
+
+.lightgreen {
+  background-color: lightgreen;
+}
+
+.black {
+  background-color: black;
+}
+
+/* Modal container */
+.modal-cont {
+  height: 50vh;
+  width: 45vw;
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 27%;
+  border-radius: 0.5rem; /* Smooth corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.text-area {
+  height: 100%;
+  width: 70%;
+  background-color: #dfe4ea;
+  resize: none;
+  border: none;
+  outline: none;
+  font-size: 1.5rem; /* Adjust font size */
+  padding: 1rem; /* Add padding for text */
+  line-height: 1.5; /* Improve readability */
+}
+
+.priority-color-cont {
+  height: 100%;
+  background-color: #4b4b4b;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem 0; /* Add padding for spacing */
+}
+
+.priority-color {
+  height: 3rem;
+  width: 5rem;
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+/* Ticket Design */
+.main-cont {
   display: flex;
   gap: 2rem;
   justify-content: center;
-  margin-top:1rem;
- 
+  margin-top: 2rem;
 }
 
-.ticket-cont{
-  height: 13rem;
+.ticket-cont {
+  height: 12rem;
   width: 15rem;
-  background-color: tomato;
-  border-radius: 1rem;
-  box-shadow: 0 2px 3px rgba(0,0,0);
+  background-color: coral;
+  border-radius: 0.5rem; /* Smooth corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+  overflow: hidden; /* Prevent content overflow */
 }
 
-.ticket-color{
-  /* background-color: black; */
-  height: 2rem;
+.ticket-color {
+  height: 1.5rem;
+}
 
-}
-.ticket-id{
+.ticket-id {
+  background-color: yellow;
   height: 2rem;
-  background-color: #5c13a5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold; /* Highlight ticket ID */
+  font-size: 1rem; /* Adjust text size */
 }
-.ticket-info{
-  height: 2rem;
-  background-color: #4b4b4b;
-}
+
 .ticket-lock{
-  bottom: 0;
+  display: flex ;
+  justify-content: flex-end;
+  margin-top:90px;
+  margin-right:5px;
+  font-size:1.5rem;
 }
-.active{
-  border: 2px solid red;
+
+.active {
+  border: 3px solid red;
+  box-shadow: 0 0 6px red; /* Add glowing effect */
 }
