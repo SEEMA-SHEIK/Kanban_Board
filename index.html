@@ -3,59 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board Class</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Kanban Board</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!-- navbar -->
-     <div class="toolbox-cont">
-        <!-- toolbar-filters -->
-         <div class="toolbox-priority-cont">
-           <div class="light-pink color"></div>
-           <div class="light-green color"></div>
-           <div class="light-blue color"></div>
-           <div class="black color"></div>
-         </div>
 
-         <!-- toolbar-actions -->
-          <div class="action-btn-cont">
-                <div class="btn-add">
-                    <i class="fa-solid fa-plus"></i>
-                </div>
-                <div class="btn-rmv">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-          </div>
-     </div>
-     <!-- Model-task-container -->
-      <div class="model-cont">
-        <textarea class="text-area"></textarea>
-        <!-- Set Priority task -->
-        <div class="priority-color">
-          <div class="light-pink priority-btn"></div>
-          <div class="light-green priority-btn"></div>
-          <div class="light-blue priority-btn"></div>
-          <div class="black priority-btn"></div>
-        </div>      
+    <!-- Toolbox Navbar  -->
+
+    <div class="toolbox-cont">
+
+     <!-- Filter Colors -->
+      <div class="toolbox-filter-colors">
+         <div class="lightpink color-box"></div>
+         <div class="lightgreen color-box"></div>
+         <div class="lightblue color-box"></div>
+         <div class="black color-box"></div>  
       </div>
 
-      <!-- ticket-container -->
-       <div class="main-cont">
+      <!-- Action Buttons -->
+      <div class="action-btn-cont">
+         <div class="add-btn">
+            <i class="fa-solid fa-plus"></i>
+         </div>
+         <div class="remove-btn">
+            <i class="fa-solid fa-trash"></i>
+         </div> 
+      </div>
 
-        <!-- ticket1 
-        <div class="ticket-cont">
+    </div>
+
+    <!-- Ticket strcuture  -->
+
+
+    <div class="main-cont">
+
+        <!-- <div class="ticket-cont">
           <div class="ticket-color"></div>
-          <div class="ticket-id"></div>
-          <div class="ticket-info"></div>
+          <div class="ticket-id">12345</div>
+          <div class="task-area">Random Task</div>
           <div class="ticket-lock">
             <i class="fa-solid fa-lock"></i>
-          </div>
-        </div> -->
-     
-       </div> 
+          </div> -->
 
-   
+        </div>
+
+
+          
+    </div>
+
+
+
+    <!-- Task Modal pop up -->
+    <div class="modal-cont">
+        <textarea class="text-area"></textarea>
+
+        <div class="priority-color-cont">
+          <div class="lightpink priority-color active"></div>
+          <div class="lightgreen priority-color"></div>
+          <div class="lightblue priority-color"></div>
+          <div class="black priority-color"></div>
+        </div>
+    </div>
+
+
+
+    
 </body>
 <script src="script.js"></script>
 </html>
